@@ -2,7 +2,7 @@
 
 <ul>
 {%- for entry in navPages %}
-{% set linkCasses 'nav-link nav-link__active' if page.url === entry.url else 'nav-link' %}}
+{% set linkCasses = 'nav-link nav-link__active' if page.url === entry.url else 'nav-link' %}}
   <li>
     <a
       class="{{linkClasses}}"
