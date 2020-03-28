@@ -27,3 +27,17 @@ p {
   max-width: 100rem;
   margin: auto;
 }
+
+.nav-link {
+  box-sizing: border-box;
+  padding: 0.5rem;
+}
+
+.nav-link:visited {
+  color: blue;
+}
+
+.nav-link__active {
+  font-weight: bold;
+  font-size: 2rem;
+}
