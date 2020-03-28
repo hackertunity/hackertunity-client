@@ -4,16 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    {# Use title with path, or append a space to the page title to avoid collpasing with the meta title #}
-    {% set pageTitle = titleWithPath or title + ' ' or '' %}
-    <title>{{ pageTitle + metadata.title }}</title>
+    
+    
+    <title>Home – Hackertunuty</title>
     <meta
       name="description"
-      content="{{ renderData.description or description or metadata.description }}"
+      content="A very cool website"
     >
     <link rel="stylesheet" href="css/index.css">
-    {% block pageStyles %}
-    {% endblock pageStyles %}
+    
+    
   </head>
   <body>
     <header>
@@ -23,13 +23,17 @@
     </header>
     <main>
       <div class="container">
-        {% block content %}{% endblock content %}
+        
+    <p>Hackertunity is a web site where some things will happen</p>
+
+
+
       </div>
     </main>
     <footer class="site-footer">
 
     </footer>
-    {% block pageScript %}
-    {% endblock pageScript %}
+    
+
   </body>
 </html>
