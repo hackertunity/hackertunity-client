@@ -11,8 +11,9 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
   line-height: 1.25;
 }
 
@@ -25,4 +26,18 @@ p {
 .container {
   max-width: 100rem;
   margin: auto;
+}
+
+.nav-link {
+  box-sizing: border-box;
+  padding: 0.5rem;
+}
+
+.nav-link:visited {
+  color: blue;
+}
+
+.nav-link__active {
+  font-weight: bold;
+  font-size: 2rem;
 }
