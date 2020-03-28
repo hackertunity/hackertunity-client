@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-echo "Cleaning up after build"
-rm ./career-catalysts/index.html
-rm ./career-catalysts/index.html
+echo "Deleting empty files"
+find dist -type f -empty -delete
