@@ -9,6 +9,7 @@ module.exports = function(eleventyConfig) {
   // eleventyConfig.addLayoutAlias("default", "layouts/base.njk");
   eleventyConfig.setLibrary("md", mdIt);
   eleventyConfig.addPassthroughCopy({ "src/css": "css" });
+  eleventyConfig.addPassthroughCopy({ "src/js": "js" });
 
   return {
     dir: {
