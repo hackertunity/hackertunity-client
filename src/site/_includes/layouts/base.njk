@@ -12,7 +12,7 @@
       content="{{ renderData.description or description or metadata.description }}"
     >
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="{{'/css/index.css' | url}}">
     {% block pageStyles %}
     {% endblock pageStyles %}
   </head>
