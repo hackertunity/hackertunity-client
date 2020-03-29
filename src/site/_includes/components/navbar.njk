@@ -15,6 +15,7 @@
 </li>
 {%- endmacro %}
 
+{# Will render no imitially, automatically expanded #}
 <div class="nav-menu-wrapper no-js">
   <ul role="list" class="nav-menu">
   {%- for entry in navPages %}
@@ -23,8 +24,10 @@
   </ul>
 </div>
 
+{# Will replace the no-js version of the list #}
+{# when DOM loaded; initially collapsed #}
 <div id="vue-nav-menu" class="nav-menu-wrapper js">
-  <button type="button" v-if="instantiated">${label}</button>
+  <button type="button" class="nav-toggle">${label}</button>
   <ul role="list" class="nav-menu">
     {% if entry.title !== 'Home' %} {{ renderNavListItem(entry) }} {%endif%}
   </ul>
