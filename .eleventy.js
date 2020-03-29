@@ -12,7 +12,8 @@ const { ELEVENTY_ENV } = process.env;
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "src/css": "css",
-    "src/js/navbar.js": "js/navbar.js"
+    // copy all JS files except the "data" files used by 11ty
+    "src/**/!(_data)/*.js": "js"
   });
 
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
