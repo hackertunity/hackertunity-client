@@ -28,6 +28,7 @@ body {
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
   line-height: 1.25;
+  margin: 0;
 }
 
 h1,
@@ -37,11 +38,18 @@ p {
 }
 
 .container {
+  width: 95%;
   max-width: 100rem;
   margin: auto;
 }
 
 /*  NAV COMPONENT   */
+
+.nav-menu-wrapper ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
 .nav-link {
   box-sizing: border-box;
