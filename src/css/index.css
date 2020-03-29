@@ -37,7 +37,9 @@ p {
   max-width: 65ch;
 }
 
-.container {
+header > *,
+nav > *,
+main > * {
   width: 95%;
   max-width: 100rem;
   margin: auto;
@@ -45,20 +47,27 @@ p {
 
 /*  NAV COMPONENT   */
 
+nav {
+  background-color: #263238;
+  color: #fff;
+}
+
 .nav-menu-wrapper ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.nav-link {
-  box-sizing: border-box;
-  padding: 0.5rem;
+/* .nav-link,
+.nav-submenu-title {
+  display: block;
+  color: inherit;
+  padding: 1rem 2rem;
 }
 
-.nav-link:visited {
-  color: blue;
-}
+.nav-menu-wrapper li:last-child > .nav-link {
+  color: red;
+} */
 
 .nav-link__active {
   font-weight: bold;
