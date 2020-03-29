@@ -15,10 +15,15 @@
 </li>
 {%- endmacro %}
 
+<div class="nav-menu-wrapper no-js">
+  <ul role="list" class="nav-menu">
+  {%- for entry in navPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
+  </ul>
+</div>
 
-<div id="nav-menu" class="mobile-nav-menu-wrapper">
+<div id="vue-nav-menu" class="nav-menu-wrapper js">
   <button type="button" v-if="instantiated">${label}</button>
-  <ul role="list" class="mobile-nav-menu">
+  <ul role="list" class="nav-menu">
   {%- for entry in navPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
   </ul>
 </div>

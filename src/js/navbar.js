@@ -1,6 +1,6 @@
 const navBarVM = new Vue({
   delimiters: ["${", "}"],
-  el: "#nav-menu",
+  el: "#vue-nav-menu",
   data: {
     label: "Nav",
     instantiated: true
