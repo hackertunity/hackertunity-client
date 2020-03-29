@@ -4,7 +4,7 @@
 {%- if not entry.inertParent-%}
 {% set linkClassname = 'nav-link nav-link__active' if page.url === entry.url else 'nav-link' %}
   <a href="{{ entry.url | url }}" class="{{linkClassname}}">{{ entry.title }}</a>
-{%- elif entry.inertParent or entry.title === 'Home' -%}
+{%- else -%}
   <span class="nav-submenu-title">{{ entry.title }}</span>
 {%-endif-%}
 {%- if entry.children.length -%}
@@ -17,13 +17,15 @@
 
 <div class="nav-menu-wrapper no-js">
   <ul role="list" class="nav-menu">
-  {%- for entry in navPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
+  {%- for entry in navPages %}
+    {% if entry.title !== 'Home' %} {{ renderNavListItem(entry) }} {%endif%}
+  {%- endfor -%}
   </ul>
 </div>
 
 <div id="vue-nav-menu" class="nav-menu-wrapper js">
   <button type="button" v-if="instantiated">${label}</button>
   <ul role="list" class="nav-menu">
-  {%- for entry in navPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
+    {% if entry.title !== 'Home' %} {{ renderNavListItem(entry) }} {%endif%}
   </ul>
 </div>

@@ -52,26 +52,35 @@ nav {
   color: #fff;
 }
 
+.nav-menu-wrapper {
+  width: initial;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
 .nav-menu-wrapper ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-/* .nav-link,
-.nav-submenu-title {
-  display: block;
+.nav-menu-wrapper a {
   color: inherit;
-  padding: 1rem 2rem;
 }
 
-.nav-menu-wrapper li:last-child > .nav-link {
-  color: red;
-} */
+.nav-link,
+.nav-submenu-title {
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+.nav-submenu-title {
+  font-weight: bold;
+  font-size: 2rem;
+}
 
 .nav-link__active {
   font-weight: bold;
-  font-size: 2rem;
 }
 
 /*  NAV COMPONENT   */
