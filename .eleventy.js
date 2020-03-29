@@ -1,4 +1,5 @@
 const anchor = require("markdown-it-anchor");
+const htmlmin = require("html-minifier");
 const mdIt = require("markdown-it")({
   html: true
 });
@@ -6,12 +7,31 @@ mdIt.use(anchor);
 
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
+const { ELEVENTY_ENV } = process.env;
+
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/css": "css" });
+  eleventyConfig.addPassthroughCopy({ "src/js/navbar.js": "js/navbar.js" });
 
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
   eleventyConfig.setLibrary("md", mdIt);
+
+  if (ELEVENTY_ENV === "prod") {
+    eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
+      if (outputPath.endsWith(".html")) {
+        let minified = htmlmin.minify(content, {
+          useShortDoctype: true,
+          removeComments: true,
+          collapseWhitespace: true
+        });
+        return minified;
+      }
+
+      return content;
+    });
+  }
+
   return {
     dir: {
       input: "src/site",
