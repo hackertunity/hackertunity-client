@@ -10,8 +10,10 @@ const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const { ELEVENTY_ENV } = process.env;
 
 module.exports = function(eleventyConfig) {
-  eleventyConfig.addPassthroughCopy({ "src/css": "css" });
-  eleventyConfig.addPassthroughCopy({ "src/js/navbar.js": "js/navbar.js" });
+  eleventyConfig.addPassthroughCopy({
+    "src/css": "css",
+    "src/js/navbar.js": "js/navbar.js"
+  });
 
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
