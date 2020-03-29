@@ -28,6 +28,16 @@ p {
   margin: auto;
 }
 
+/*  NAV COMPONENT   */
+
+html.no-js .js {
+  display: none;
+}
+
+html.js .js {
+  display: initial;
+}
+
 .nav-link {
   box-sizing: border-box;
   padding: 0.5rem;
@@ -41,3 +51,5 @@ p {
   font-weight: bold;
   font-size: 2rem;
 }
+
+/*  NAV COMPONENT   */
