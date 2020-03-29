@@ -9,6 +9,19 @@ html {
   font-size: 62.5%;
 }
 
+/**
+ * Once JS loads, replace .no-js components with
+ * components that can use js
+ */
+
+html.no-js .js {
+  display: none;
+}
+
+html.js .no-js {
+  display: none;
+}
+
 body {
   font-size: 1.6rem;
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -29,14 +42,6 @@ p {
 }
 
 /*  NAV COMPONENT   */
-
-html.no-js .js {
-  display: none;
-}
-
-html.js .js {
-  display: initial;
-}
 
 .nav-link {
   box-sizing: border-box;
