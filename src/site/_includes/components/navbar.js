@@ -3,11 +3,11 @@ const navBarVM = new Vue({
   el: "#vue-nav-menu",
   data: {
     label: "Nav",
-    instantiated: true
+    inst: false
   },
   methods: {
-    humanizeURL: function(url) {
-      return url.replace(/^https?:\/\//, "").replace(/\/$/, "");
+    handleClick(str) {
+      alert(str);
     }
   }
 });
