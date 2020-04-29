@@ -1,14 +1,16 @@
 {% set navPages = collections.all | eleventyNavigation %}
 {% macro renderNavListItem(entry, mobile) -%}
-<li>
+{% set outerLiClassname = 'has-submenu' if mobile else '' %}
+{% set hasPopup = 'true' if mobile else 'false' %}
+<li aria-haspopup="{{hasPopup}}" aria-expanded="false" class="{{outerLiClassname}}">
 {%- if not entry.inertParent-%}
 {% set linkClassname = 'nav-link nav-link__active' if page.url === entry.url else 'nav-link' %}
   <a href="{{ entry.url | url }}" class="{{linkClassname}}">{{ entry.title }}</a>
 {%- else -%}
   {%if mobile %}
-    <span class="nav-submenu-title">{{ entry.title }}</span>
+    <button @mouseover="startHover" @mouseout="endHover" @click="handleClick" class="nav-submenu-title">{{ entry.title }}</button>
   {%else%}
-    {%raw%}<button class="nav-submenu-title js" @click="handleClick('bbb')">{%endraw%} {{ entry.title }}</button>
+    {%raw%}<button class="nav-submenu-title js" {%endraw%} {{ entry.title }}</button>
   {%endif%}
 
 
