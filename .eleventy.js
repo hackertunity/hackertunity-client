@@ -10,11 +10,7 @@ const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const { ELEVENTY_ENV } = process.env;
 
 module.exports = function(eleventyConfig) {
-  eleventyConfig.addPassthroughCopy({
-    "src/css": "css",
-    // copy all JS files except the "data" files used by 11ty
-    "src/**/!(_data)/*.js": "js"
-  });
+  eleventyConfig.addPassthroughCopy("src/assets");
 
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
@@ -37,12 +33,13 @@ module.exports = function(eleventyConfig) {
 
   return {
     dir: {
-      input: "src/site",
+      input: "./src",
+      includes: "assets",
+      layouts: "templates",
       output: "dist"
     },
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
-    passthroughFileCopy: true,
     templateFormats: ["njk", "md"]
   };
 };
