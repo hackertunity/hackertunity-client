@@ -13,9 +13,9 @@ let markdownItConfig = markdownIt({
  * templates from within each other.
  *
  * For example, this allows us to write:
- *   {% include 'components/navbar.njk' %}
+ *   {% include 'partials/navbar.njk' %}
  * instead of
- *   {% include 'src/templates/components/navbar.njk' %}
+ *   {% include 'src/templates/partials/navbar.njk' %}
  */
 let Nunjucks = require("nunjucks");
 let nunjucksEnvironment = new Nunjucks.Environment(
