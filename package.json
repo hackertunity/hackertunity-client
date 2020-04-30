@@ -6,10 +6,10 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "concurrently \"npm run watch:js\" \"npm run serve:site\"",
-    "build:js": "parcel build src/js/index.js --out-dir dist/js",
+    "build:js": "parcel build src/assets/js/index.js --out-dir dist/assets/js",
     "build:site": "cross-env ELEVENTY_ENV=prod eleventy --pathprefix /hackertunity-client/",
     "build": "npm run build:js && npm run build:site",
-    "watch:js": "parcel watch src/js/index.js --out-dir dist/js",
+    "watch:js": "parcel watch src/assets/js/index.js --out-dir dist/assets/js",
     "serve:site": "cross-env ELEVENTY_ENV=dev eleventy --serve",
     "test": "echo \"Warning: no test specified\" && exit 0"
   },
