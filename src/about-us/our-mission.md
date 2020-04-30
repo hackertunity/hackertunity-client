@@ -1,6 +1,6 @@
 ---
 permalink: "our-mission/"
-layout: layouts/index.njk
+layout: index.njk
 eleventyNavigation:
   parent: About us
   key: Our mission

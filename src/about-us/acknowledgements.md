@@ -1,6 +1,6 @@
 ---
 permalink: "acknowledgements/"
-layout: layouts/index.njk
+layout: index.njk
 eleventyNavigation:
   key: Acknowledgements
   parent: About us

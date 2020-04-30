@@ -1,6 +1,6 @@
 ---
 permalink: "training-resources/"
-layout: layouts/index.njk
+layout: index.njk
 eleventyNavigation:
   key: Training resources
   parent: Career catalysts

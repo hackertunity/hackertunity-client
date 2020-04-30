@@ -1,6 +1,6 @@
 ---
 permalink: "the-team/"
-layout: layouts/index.njk
+layout: index.njk
 eleventyNavigation:
   key: The team
   parent: About us
