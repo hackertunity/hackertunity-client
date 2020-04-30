@@ -1,11 +1,16 @@
-const anchor = require("markdown-it-anchor");
 const htmlmin = require("html-minifier");
-const mdIt = require("markdown-it")({
-  html: true
-});
-mdIt.use(anchor);
-
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+
+const markdownIt = require("markdown-it");
+const markdownItAnchor = require("markdown-it-anchor");
+let markdownItLibrary = markdownIt({
+  html: true
+}).use(markdownItAnchor);
+
+let Nunjucks = require("nunjucks");
+let nunjucksEnvironment = new Nunjucks.Environment(
+  new Nunjucks.FileSystemLoader("src/templates")
+);
 
 const { ELEVENTY_ENV } = process.env;
 
@@ -14,7 +19,8 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
-  eleventyConfig.setLibrary("md", mdIt);
+  eleventyConfig.setLibrary("md", markdownItLibrary);
+  eleventyConfig.setLibrary("njk", nunjucksEnvironment);
 
   if (ELEVENTY_ENV === "prod") {
     eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
