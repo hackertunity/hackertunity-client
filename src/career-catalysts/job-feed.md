@@ -1,6 +1,5 @@
 ---
 permalink: "job-feed/"
-layout: index.njk
 eleventyNavigation:
   key: Job feed
   parent: Career catalysts
