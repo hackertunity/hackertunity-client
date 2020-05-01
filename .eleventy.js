@@ -10,7 +10,7 @@ let markdownItConfig = markdownIt({
 /**
  * Create a new Nunjucks environment that sets Nunjucks' base path
  * to "src/templates" so that we can use shorter paths to reference
- * templates from within each other.
+ * templates from within the app.
  *
  * For example, this allows us to write:
  *   {% include 'partials/navbar.njk' %}
@@ -19,7 +19,7 @@ let markdownItConfig = markdownIt({
  */
 let Nunjucks = require("nunjucks");
 let nunjucksEnvironment = new Nunjucks.Environment(
-  new Nunjucks.FileSystemLoader("src/templates")
+  new Nunjucks.FileSystemLoader("src/templates", { watch: true })
 );
 
 const { ELEVENTY_ENV } = process.env;
