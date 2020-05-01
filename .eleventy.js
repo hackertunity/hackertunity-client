@@ -1,5 +1,6 @@
 const htmlmin = require("html-minifier");
-const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const pluginNavigator = require("@11ty/eleventy-navigation");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
@@ -27,7 +28,8 @@ const { ELEVENTY_ENV } = process.env;
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
 
-  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addPlugin(pluginNavigator);
+  eleventyConfig.addPlugin(pluginRss);
 
   eleventyConfig.setLibrary("md", markdownItConfig);
   eleventyConfig.setLibrary("njk", nunjucksEnvironment);
