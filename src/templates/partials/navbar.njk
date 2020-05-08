@@ -8,7 +8,7 @@
   <a href="{{ entry.url | url }}" class="{{linkClassname}}" {% if page.url == entry.url %}aria-current="page"{% endif %}>{{ entry.title }}</a>
 {%- else -%}
   {%if mobile %}
-    <button @mouseover="startHover" @mouseout="endHover" @click="handleClick" class="nav-submenu-title">{{ entry.title }}</button>
+    <button @click="handleClick" class="nav-submenu-title">{{ entry.title }}</button>
   {%else%}
     {%raw%}<button class="nav-submenu-title js" {%endraw%} {{ entry.title }}</button>
   {%endif%}
