@@ -31,6 +31,13 @@
     <footer class="site-footer">
 
     </footer>
+    {# Conditionally choose either minified or dev release of Vue #}
+    {% if project.env === 'prod' %}
+    <script src="https://unpkg.com/vue@^2.6/dist/vue.min.js"></script>
+    {% else %}
+    <script src="https://unpkg.com/vue@^2.6/dist/vue.js"></script>
+    {% endif %}
+    <script src="{{'/assets/js/navbar.js' | url}}"></script>
 
     {% block pageScript %}
     {% endblock pageScript %}

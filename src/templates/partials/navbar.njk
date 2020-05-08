@@ -24,7 +24,7 @@
 </li>
 {%- endmacro %}
 
- <div class="nav-menu-wrapper no-js">
+ <div id="vue-nav-menu" class="nav-menu-wrapper no-js">
   <ul role="list" class="nav-menu">
   {%- for entry in navPages %}
     {% if entry.title !== 'Home' %} {{ renderNavListItem(entry, true) }} {%endif%}
