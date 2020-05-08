@@ -5,7 +5,7 @@
 <li aria-haspopup="{{hasPopup}}" aria-expanded="false" class="{{outerLiClassname}}">
 {%- if not entry.inertParent-%}
 {% set linkClassname = 'nav-link nav-link__active' if page.url === entry.url else 'nav-link' %}
-  <a href="{{ entry.url | url }}" class="{{linkClassname}}">{{ entry.title }}</a>
+  <a href="{{ entry.url | url }}" class="{{linkClassname}}" {% if page.url == entry.url %}aria-current="page"{% endif %}>{{ entry.title }}</a>
 {%- else -%}
   {%if mobile %}
     <button @mouseover="startHover" @mouseout="endHover" @click="handleClick" class="nav-submenu-title">{{ entry.title }}</button>
@@ -15,6 +15,7 @@
 
 
 {%-endif-%}
+
 {%- if entry.children.length -%}
   <ul role="list" class="nav-submenu">
     {%- for child in entry.children %}{{ renderNavListItem(child) }}{% endfor -%}
@@ -23,8 +24,7 @@
 </li>
 {%- endmacro %}
 
- <div id="vue-nav-menu" class="nav-menu-wrapper no-js">
- {%raw%}<button type="button" class="nav-toggle">{%endraw%} ${label}</button>
+ <div class="nav-menu-wrapper no-js">
   <ul role="list" class="nav-menu">
   {%- for entry in navPages %}
     {% if entry.title !== 'Home' %} {{ renderNavListItem(entry, true) }} {%endif%}

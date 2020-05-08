@@ -6,10 +6,10 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "concurrently \"npm run watch:js\" \"npm run serve:site\"",
-    "build:js": "parcel build src/js/index.js --out-dir dist/js",
+    "build:js": "parcel build src/assets/js/index.js --out-dir dist/assets/js",
     "build:site": "cross-env ELEVENTY_ENV=prod eleventy --pathprefix /hackertunity-client/",
     "build": "npm run build:js && npm run build:site",
-    "watch:js": "parcel watch src/js/index.js --out-dir dist/js",
+    "watch:js": "parcel watch src/assets/js/index.js --out-dir dist/assets/js",
     "serve:site": "cross-env ELEVENTY_ENV=dev eleventy --serve",
     "test": "echo \"Warning: no test specified\" && exit 0"
   },
@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@11ty/eleventy-navigation": "^0.1.5",
+    "@11ty/eleventy-plugin-rss": "^1.0.7",
     "concurrently": "^5.1.0",
     "cross-env": "^7.0.2",
     "eslint": "^6.8.0",
@@ -33,6 +34,7 @@
     "html-minifier": "^4.0.0",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.7",
+    "luxon": "^1.23.0",
     "parcel-bundler": "^1.12.4",
     "prettier": "^1.19.1",
     "sass": "^1.23.7",

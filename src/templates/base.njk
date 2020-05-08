@@ -12,7 +12,7 @@
       content="{{ renderData.description or description or metadata.description }}"
     >
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{'/css/index.css' | url}}">
+    <link rel="stylesheet" href="{{' /assets/css/index.css' | url}}">
     {% block pageStyles %}
     {% endblock pageStyles %}
   </head>
@@ -21,7 +21,7 @@
         <h1><a href="/" rel="noopener noreferrer">Hackertunity</a></h1>
     </header>
     <nav>
-        {% include 'components/navbar.njk'%}
+        {% include 'partials/navbar.njk' %}
     </nav>
     <main>
       <div class="container">
@@ -31,20 +31,8 @@
     <footer class="site-footer">
 
     </footer>
-    {# Conditionally choose either minified or dev release of Vue #}
-    {# project vars defined in site/_data #}
-    {% if project.env === 'prod' %}
-    <script src="https://unpkg.com/vue@^2.6/dist/vue.min.js"></script>
-    {% else %}
-    <script src="https://unpkg.com/vue@^2.6/dist/vue.js"></script>
-    {% endif %}
-    <script src="{{'/js/navbar.js' | url}}"></script>
+
     {% block pageScript %}
     {% endblock pageScript %}
-    <script>
-    {# document.addEventListener('DOMContentLoaded',function(e) {
-      document.documentElement.classList = 'js'
-    }) #}
-    </script>
   </body>
 </html>
