@@ -97,10 +97,21 @@ p {
   max-width: 65ch;
 }
 
-header > *,
-nav > *,
 main > * {
   width: 95%;
   max-width: 100rem;
   margin: auto;
+}
+
+.header-nav-container {
+  display: flex;
+  height: 100%
+}
+
+header {
+  width: 7vw;
+}
+
+nav {
+  width: 93vw;
 }

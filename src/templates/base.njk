@@ -18,12 +18,14 @@
     {% endblock pageStyles %}
   </head>
   <body>
-    <header>
-        <h1><a href="/" rel="noopener noreferrer">Hackertunity</a></h1>
-    </header>
-    <nav>
-        {% include 'partials/navbar.njk' %}
-    </nav>
+  <div class="header-nav-container">
+      <header>
+          <h1><a href="/" rel="noopener noreferrer">HT</a></h1>
+      </header>
+      <nav>
+          {% include 'partials/navbar.njk' %}
+      </nav>
+    </div>
     <main>
       <div class="container">
         {% block content %}{% endblock content %}

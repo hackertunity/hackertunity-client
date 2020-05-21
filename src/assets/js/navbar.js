@@ -7,6 +7,7 @@ const navBarVM = new Vue({
   },
   methods: {
     handleClick(e) {
+      // TODO: close any  menus already open
       const node = e.target;
       if (node.parentNode.className == "has-submenu") {
         node.parentNode.className = "has-submenu open";
