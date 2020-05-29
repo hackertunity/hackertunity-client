@@ -17,7 +17,6 @@ nav {
     display: flex;
     justify-content: space-around;
     height: 100%;
-    background-color: #263238;
   }
   
   .nav-menu-wrapper a {
@@ -72,13 +71,9 @@ nav {
     margin: 0;
 }
 
-.has-submenu.open > ul a {
-  text-decoration: none;
-}
-
 .has-submenu.open > ul a:hover,
 .has-submenu.open > ul a:focus {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .title-button {
