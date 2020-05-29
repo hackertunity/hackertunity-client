@@ -2,5 +2,5 @@
 eleventyNavigation:
   key: Career catalysts
   inertParent: true
-  order: 1
+  order: 2
 ---

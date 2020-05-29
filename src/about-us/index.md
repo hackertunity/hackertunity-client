@@ -2,5 +2,5 @@
 eleventyNavigation:
   key: About us
   inertParent: true
-  order: 2
+  order: 1
 ---
