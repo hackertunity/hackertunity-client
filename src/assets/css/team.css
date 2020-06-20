@@ -1,0 +1,30 @@
+.card h4 {
+    font-size: 1.8em;
+}
+
+.bio-item {
+    display: flex;
+}
+
+.bio-item__bio {
+    padding: 10px;
+}
+
+.bio-item h5 {
+    font-size: 1.1em;
+    margin-bottom: 0;
+}
+
+.pronouns {
+    margin-top: 5px;
+}
+
+.bio-item__img {
+    display: flex;
+    align-items: center;
+}
+
+.bio-item__img img {
+    height: 100px;
+    border-radius: 50%;
+}
