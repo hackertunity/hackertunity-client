@@ -1,0 +1,73 @@
+{
+    "board": [
+        {
+            "name": "Stephanie Solis",
+            "title": "President & Founder",
+            "imgFile": "steph.png",
+            "bio": "Stephanie was born and raised in Lancaster, California and has a bachelor’s degree in Information Systems from the University of California, Riverside. She plays roller derby and can be a bit aggressive at times. But she really just wants equality and justice in the world.",
+            "pronouns": "She/Her/Hers"
+        },
+        {
+            "name": "EJ Mason",
+            "title": "Vice President & Co-Founder & Member of the Tech Committee",
+            "imgFile": "",
+            "bio": "",
+            "pronouns": "They/Them/Theirs"
+        },
+        {
+            "name": "Leo Yockey",
+            "title": "Treasurer & Co-Founder & Member of the Tech Committee",
+            "imgFile": "leo.png",
+            "bio": "Leo is a freelance Software Engineer based in Los Angeles. He appreciates the value of opportunity and believes in technology’s ability to make the world better for the whole of humanity, not just a privileged few. While also an avid traveler, Leo is primarily a homebody who spends his free time reading and watching sports. Send him memes.",
+            "pronouns": "He/Him/His"
+        },
+        {
+            "name": "Aaron Hampton",
+            "title": "Secretary & Co-Founder",
+            "imgFile": "aaron.png",
+            "bio": "Aaron was born at a young age. He lives in a house and works when he can. He’s a nice young man and sensitive, please don’t be too loud around him.",
+            "pronouns": "He/Him/His"
+        }
+    ],
+    "committees": {
+        "technology": [
+            {
+                "name": "Tim Losee",
+                "title": "Director of Technology & Co-Founder",
+                "imgFile": "",
+                "bio": "",
+                "pronouns": "He/Him/His"
+            },
+            {
+                "name": "Emily Solis",
+                "title": "Member of the Tech Committee",
+                "imgFile": "",
+                "bio": "",
+                "pronouns": "She/Her/Hers"
+            },
+            {
+                "name": "Valerie Solis",
+                "title": "Member of the Tech Committee",
+                "imgFile": "",
+                "bio": "Valerie is a Cisco certified network engineer based in Columbus, Ohio. She believes the field of tech should be all inclusive and envisions a world where nerds of all kinds work together in harmony to build a better future. Also, she is a Sagittarius sun, Scorpio moon, and Taurus Rising. Her favorite things are traveling, Netflix, and snacks.",
+                "pronouns": "She/Her/Hers"
+            },
+            {
+                "name": "Sasha Sashington",
+                "title": "Member of the Tech Committee",
+                "imgFile": "",
+                "bio": "",
+                "pronouns": "She/Her/Hers"
+            }
+        ],
+        "pr": [
+            {
+                "name": "Corrine Rincon",
+                "title": "Director of Public Relations",
+                "imgFile": "",
+                "bio": "",
+                "pronouns": "She/Her/Hers"
+            }
+        ]
+    }
+}
