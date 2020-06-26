@@ -1,4 +1,5 @@
 ---
+layout: "job-feed.njk"
 permalink: "job-feed/"
 eleventyNavigation:
   key: Job feed
