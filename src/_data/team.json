@@ -41,21 +41,21 @@
             {
                 "name": "Emily Solis",
                 "title": "Member of the Tech Committee",
-                "imgFile": "",
-                "bio": "",
+                "imgFile": "emily.jpg",
+                "bio": "Emily has volunteered with non-profit organizations since the age of 18. She has made several professional career transitions, finding success as a Licensed Nurse, Instructor of Nursing, Web Technology Consultant, and Sales Director. Today she works full-time as a Network Security Engineer and mentors students and entry-level engineers. Emily lives in Nevada and splits her time between Henderson and Lake Tahoe.",
                 "pronouns": "She/Her/Hers"
             },
             {
                 "name": "Valerie Solis",
                 "title": "Member of the Tech Committee",
-                "imgFile": "",
+                "imgFile": "valerie.JPG",
                 "bio": "Valerie is a Cisco certified network engineer based in Columbus, Ohio. She believes the field of tech should be all inclusive and envisions a world where nerds of all kinds work together in harmony to build a better future. Also, she is a Sagittarius sun, Scorpio moon, and Taurus Rising. Her favorite things are traveling, Netflix, and snacks.",
                 "pronouns": "She/Her/Hers"
             },
             {
                 "name": "Sasha Sashington",
                 "title": "Member of the Tech Committee",
-                "imgFile": "",
+                "imgFile": "Sasha is a Network Engineer and a woman of few words.",
                 "bio": "",
                 "pronouns": "She/Her/Hers"
             }
@@ -67,6 +67,15 @@
                 "imgFile": "",
                 "bio": "",
                 "pronouns": "She/Her/Hers"
+            }
+        ],
+        "events": [
+            {
+                "name": "Tim Grove",
+                "title": "Director of Events",
+                "imgFile": "",
+                "bio": "Tim has moved over 20 times in his life, but mostly grew up in Riverside, CA and now lives in Los Angeles. He loves cultivating experiences that are inclusive, are “edutaining”, and enact positive change for the community. He also does improv and stuff — he even improvised this whole bio. Book him now!",
+                "pronouns": "He/Him/His"
             }
         ]
     }
