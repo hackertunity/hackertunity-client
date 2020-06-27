@@ -98,12 +98,6 @@ p {
   max-width: 65ch;
 }
 
-main > * {
-  width: 95%;
-  max-width: 100rem;
-  margin: auto;
-}
-
 .header-nav-container {
   display: flex;
   height: 100%
