@@ -10,8 +10,9 @@
     padding: 10px;
 }
 
-.bio-item h5 {
-    font-size: 1.1em;
+.bio-item h5,
+.list-item h5 {
+    font-size: 1.5em;
     margin-bottom: 0;
 }
 
@@ -24,7 +25,13 @@
     align-items: center;
 }
 
-.bio-item__img img {
+.bio-item__img img,
+.sasha {
     height: 100px;
+    width: 100px;
     border-radius: 50%;
+}
+
+.sasha {
+    background-color: #263238;
 }

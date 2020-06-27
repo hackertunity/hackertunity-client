@@ -21,7 +21,7 @@
     },
     {
         "name": "IT Network Engineering",
-        "description": "An IT network engineer designs the computer networks that organizations rely on to access, share, and store information. The complexity of the work depends on the organization: a small start up may employ a computer engineer to oversee a handful of desktop computers, while an engineer at a large multinational manages a web of complex, globally distributed networks.",
+        "description": "An IT network engineer designs the computer networks that organizations rely on to access, share, and store information. The complexity of the work depends on the organization: a small start up may employ a computer engineer to oversee a handful of desktop computers, while an engineer at a large multinational manages a web of complex, globally distributed networks. Check out the resources below!",
         "href": "#network",
         "id": "network",
         "trainings": [
@@ -41,7 +41,7 @@
     },
     {
         "name": "Web Developer",
-        "description": "An IT network engineer designs the computer networks that organizations rely on to access, share, and store information. The complexity of the work depends on the organization: a small start up may employ a computer engineer to oversee a handful of desktop computers, while an engineer at a large multinational manages a web of complex, globally distributed networks.",
+        "description": "There are a lot of possible careers in development. For more information on the training available for these, check below!",
         "href": "#dev",
         "id": "dev",
         "trainings": [

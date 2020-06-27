@@ -15,7 +15,7 @@
 {%- endmacro %}
 
 {% macro renderResources(resource) -%}
-    <div class="card" id="{{resource.id}}">
+    <div class="card resources" id="{{resource.id}}">
         <h4>{{resource.name}}: Training Resources</h4>
         <ul role="list">
             {%- for t in resource.trainings %}
@@ -34,7 +34,7 @@
         {%if training.jobTitlesAvailable %}
             <p>Job Titles Available: {{training.jobTitlesAvailable}}</p>
         {%else%}
-            <ul>
+            <ul role="list">
                 {%- for p in training.paths %}
                     {{ renderWebPath(p) }}
                 {% endfor -%}
@@ -45,6 +45,7 @@
 
 {% macro renderWebPath(path) -%}
     <li class="list-item">
+        <hr />
         <h5>{{path.path}}</h5>
         <p>Job Titles Available: {{path.jobTitlesAvailable}}</p>
     </li>

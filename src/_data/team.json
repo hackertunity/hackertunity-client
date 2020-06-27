@@ -57,7 +57,8 @@
                 "title": "Member of the Tech Committee",
                 "imgFile": "",
                 "bio": "Sasha is a Network Engineer and a woman of few words.",
-                "pronouns": "She/Her/Hers"
+                "pronouns": "She/Her/Hers",
+                "className": "sasha"
             }
         ],
         "pr": [
