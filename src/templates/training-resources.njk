@@ -34,16 +34,20 @@
         {%if training.jobTitlesAvailable %}
             <p>Job Titles Available: {{training.jobTitlesAvailable}}</p>
         {%else%}
-            {%- for p in training.paths %}
-                {{ renderWebPath(p) }}
-            {% endfor -%}
+            <ul>
+                {%- for p in training.paths %}
+                    {{ renderWebPath(p) }}
+                {% endfor -%}
+            </ul>
         {%endif%}
     </li>
 {%- endmacro %}
 
 {% macro renderWebPath(path) -%}
-    <h5>{{path.path}}</h5>
-    <p>Job Titles Available: {{path.jobTitlesAvailable}}</p>
+    <li class="list-item">
+        <h5>{{path.path}}</h5>
+        <p>Job Titles Available: {{path.jobTitlesAvailable}}</p>
+    </li>
 {%- endmacro %}
 
 {% block pageContent %}

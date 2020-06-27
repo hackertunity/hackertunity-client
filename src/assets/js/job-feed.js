@@ -7,6 +7,7 @@ const renderJobPosting = (posting) => {
   const ul = document.getElementById('job-posting-list');
   const li = document.createElement('li');
   const img = document.createElement('img');
+  const hr = document.createElement('hr');
   img.setAttribute('src', imgSrc);
   img.setAttribute('alt', '');
   const div = document.createElement('div');
@@ -16,10 +17,10 @@ const renderJobPosting = (posting) => {
   const pEmployer = document.createElement('p');
   pEmployer.innerText = 'Employer: ' + companyName;
   const pDate = document.createElement('p');
-  pDate.innerText = 'Posted: ' + pubDate;
+  pDate.innerText = 'Posted: ' + new Date(pubDate).toLocaleDateString();
 
   div.append(a, pEmployer, pDate);
-  li.append(img, div);
+  li.append(hr, img, div);
   ul.append(li);
 };
 

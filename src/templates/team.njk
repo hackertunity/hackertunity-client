@@ -4,7 +4,7 @@
 {% set backgroundImagePath = '/assets/img/laptops.png' %}
 
 {% macro renderBio(bio) -%}
-    <div class="bio-item">
+    <li class="bio-item list-item">
         <div class="bio-item__img">
             {% if bio.imgFile %}
                 <img src="/assets/img/{{bio.imgFile}}" />
@@ -15,16 +15,18 @@
             <p class="pronouns">Pronouns: {{bio.pronouns}}</p>
             <p>{{bio.bio}}</p>
         </div>
-    </div>
+    </li>
 {%- endmacro %}
 
 {% block pageContent %}
 
     <div class="card">
         <h3>The Board</h3>
-        {%- for bio in team.board %}
-            {{ renderBio(bio) }}
-        {% endfor -%}
+        <ul>
+            {%- for bio in team.board %}
+                {{ renderBio(bio) }}
+            {% endfor -%}
+        </ul>
     </div>
 
     <div class="card">
@@ -33,27 +35,33 @@
         <h4 class="committee-name">
             Technology Committee
         </h4>
-        {%- for bio in team.committees.technology %}
-            {{ renderBio(bio) }}
-        {% endfor -%}
+        <ul>
+            {%- for bio in team.committees.technology %}
+                {{ renderBio(bio) }}
+            {% endfor -%}
+        </ul>
 
         <hr />
 
         <h4 class="committee-name">
             Public Relations Committee
         </h4>
-        {%- for bio in team.committees.pr %}
-            {{ renderBio(bio) }}
-        {% endfor -%}
+        <ul>
+            {%- for bio in team.committees.pr %}
+                {{ renderBio(bio) }}
+            {% endfor -%}
+        </ul>
 
         <hr />
 
         <h4 class="committee-name">
             Events Committee
         </h4>
-        {%- for bio in team.committees.events %}
-            {{ renderBio(bio) }}
-        {% endfor -%}
+        <ul>
+            {%- for bio in team.committees.events %}
+                {{ renderBio(bio) }}
+            {% endfor -%}
+        </ul>
     </div>
 
 {% endblock %}
