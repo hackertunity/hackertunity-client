@@ -93,15 +93,8 @@ button::-moz-focus-inner,
 }
 
 h1,
-h2,
 p {
   max-width: 65ch;
-}
-
-main > * {
-  width: 95%;
-  max-width: 100rem;
-  margin: auto;
 }
 
 .header-nav-container {

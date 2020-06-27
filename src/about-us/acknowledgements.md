@@ -1,4 +1,5 @@
 ---
+layout: "acknowledgements.njk"
 permalink: "acknowledgements/"
 eleventyNavigation:
   key: Acknowledgements
