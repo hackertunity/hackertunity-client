@@ -1,0 +1,69 @@
+{% extends 'page.njk' %}
+{% set titleWithPath = 'Training Resources - ' %}
+{% set titleOfPage = 'Training Resources' %}
+{% set backgroundImagePath = '/assets/img/library.jpeg' %}
+
+{% macro renderCareerOptions(option) -%}
+    <li class="list-item">
+        <a href="{{option.href}}">
+            {{option.name}}
+        </a>
+        <p>
+            {{option.description}}
+        </p>
+    </li>
+{%- endmacro %}
+
+{% macro renderResources(resource) -%}
+    <div class="card resources" id="{{resource.id}}">
+        <h4>{{resource.name}}: Training Resources</h4>
+        <ul role="list">
+            {%- for t in resource.trainings %}
+                {{ renderTrainings(t) }}
+            {% endfor -%}
+        </ul>
+    </div>
+{%- endmacro %}
+
+{% macro renderTrainings(training) -%}
+    <li class="list-item">
+        <a href="{{training.href}}">
+            {{training.title}}
+        </a>
+        <p>Length: {{training.length}}</p>
+        {%if training.jobTitlesAvailable %}
+            <p>Job Titles Available: {{training.jobTitlesAvailable}}</p>
+        {%else%}
+            <ul role="list">
+                {%- for p in training.paths %}
+                    {{ renderWebPath(p) }}
+                {% endfor -%}
+            </ul>
+        {%endif%}
+    </li>
+{%- endmacro %}
+
+{% macro renderWebPath(path) -%}
+    <li class="list-item">
+        <hr />
+        <h5>{{path.path}}</h5>
+        <p>Job Titles Available: {{path.jobTitlesAvailable}}</p>
+    </li>
+{%- endmacro %}
+
+{% block pageContent %}
+
+    <div class="card">
+        <h3>Career Options</h3>
+        <ul role="list">
+            {%- for r in resources %}
+                {{ renderCareerOptions(r) }}
+            {% endfor -%}
+        </ul>
+    </div>
+
+    {%- for r in resources %}
+        {{ renderResources(r) }}
+    {% endfor -%}
+
+{% endblock %}

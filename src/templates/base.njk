@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {# Use title with path, or append a space to the page title to avoid collpasing with the meta title #}
+    {% set pageTitle = titleWithPath or title + ' ' or '' %}
+    <title>{{ pageTitle + metadata.title }}</title>
+    <meta
+      name="description"
+      content="{{ renderData.description or description or metadata.description }}"
+    >
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{' /assets/css/index.css' | url}}">
+    <link rel="stylesheet" href="{{' /assets/css/navbar.css' | url}}">
+    <link rel="stylesheet" href="{{' /assets/css/page.css' | url}}">
+    <link rel="stylesheet" href="{{' /assets/css/team.css' | url}}">
+    {% block pageStyles %}
+    {% endblock pageStyles %}
+  </head>
+  <body>
+  <div class="header-nav-container">
+      <header>
+          <h1><a href="/" rel="noopener noreferrer"><img src="{{'/assets/img/logo.png' | url}}" alt="Hackertunity"></a></h1>
+      </header>
+      <nav>
+          {% include 'partials/navbar.njk' %}
+      </nav>
+    </div>
+    <main>
+      <div class="container">
+        {% block content %}{% endblock content %}
+      </div>
+    </main>
+    <footer class="site-footer">
+
+    </footer>
+    {# {% if project.env === 'prod' %} #}
+    <script src="{{'/assets/js/navbar.js' | url}}"></script>
+
+    {% block pageScript %}
+    {% endblock pageScript %}
+  </body>
+</html>

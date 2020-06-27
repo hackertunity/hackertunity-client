@@ -1,0 +1,119 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: 3px solid goldenrod;
+}
+
+html {
+  font-size: 10px;
+  font-size: 62.5%;
+  margin: 0;
+}
+
+/**
+ * Once JS loads, replace .no-js components with
+ * components that can use js
+ */
+
+html.no-js .js {
+  display: none;
+}
+
+html.js .no-js {
+  display: none;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  line-height: 1.25;
+  margin: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+h1,
+p {
+  max-width: 65ch;
+}
+
+.header-nav-container {
+  display: flex;
+  height: 100%
+}
+
+header {
+  width: 7vw;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header img {
+  width: 100%;
+}
+
+nav {
+  width: 93vw;
+}

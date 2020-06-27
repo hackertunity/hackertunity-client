@@ -1,0 +1,19 @@
+{% extends 'base.njk' %}
+
+{% block content %}
+
+    <style>
+        .h2-container {
+            background-image: url("{{backgroundImagePath}}");
+        }
+    </style>
+
+    <section class="page-container">
+        <div class="h2-container">
+            <h2><span id="titleOfPage">{{titleOfPage}}</span></h2>
+        </div>
+
+        {% block pageContent %}{% endblock pageContent %}
+    </section>
+
+{% endblock %}
