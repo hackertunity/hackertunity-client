@@ -48,6 +48,14 @@
     margin-bottom: 0;
 }
 
+.list-item {
+    list-style: none;
+}
+
+.acknowledgements h3 {
+    margin-bottom: 0;
+}
+
 #mission-statement {
     text-align: center;
     font-weight: bold;

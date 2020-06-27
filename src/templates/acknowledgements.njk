@@ -1,0 +1,28 @@
+{% extends 'page.njk' %}
+{% set titleWithPath = 'Acknowledgements – ' %}
+{% set titleOfPage = 'Acknowledgements' %}
+{% set backgroundImagePath = '/assets/img/laptops.png' %}
+
+{% macro renderAcknowledgement(person) -%}
+    <li class="list-item">
+        <hr />
+        <h3>{{person.name}}</h3>
+        <p>{{person.description}}</p>
+    </li>
+{%- endmacro %}
+
+{% block pageContent %}
+    <div class="card">
+        <p>
+            We at Hacketrunity, Inc. would like to acknowledge the following people for their contributions toward our cause:
+        </p>
+
+        <ul class="acknowledgements">
+            {%- for a in acknowledgements %}
+                {{ renderAcknowledgement(a) }}
+            {% endfor -%}
+        </ul>
+
+    </div>
+
+{% endblock %}
