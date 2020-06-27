@@ -45,6 +45,15 @@
         {%- for bio in team.committees.pr %}
             {{ renderBio(bio) }}
         {% endfor -%}
+
+        <hr />
+
+        <h4 class="committee-name">
+            Events Committee
+        </h4>
+        {%- for bio in team.committees.events %}
+            {{ renderBio(bio) }}
+        {% endfor -%}
     </div>
 
 {% endblock %}
