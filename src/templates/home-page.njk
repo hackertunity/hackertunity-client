@@ -6,14 +6,22 @@
 {% block content %}
 
     <style>
-        body {
+        html {
             background-image: url("{{backgroundImagePath}}");
             background-size: cover;
             background-repeat: no-repeat;
+            height: 100vw;
         }
         .content {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
+        }
+        .content img{
+            width: 250px;
+        }
+
+        .content p {
+            font-size: 1.6em;
         }
     </style>
 
@@ -22,11 +30,11 @@
             <h2><span id="titleOfPage">{{titleOfPage}}</span></h2>
         </div>
         <div class="content">
-            <img src="/assets/img/logo.png" />
+            <img src="/assets/img/logo-clear.PNG" />
             <div>
-                <p>Emd poverty</p>
+                <p>End poverty.</p>
+                <p>Empower the people.</p>
                 <p>Enrich tech.</p>
-                <p>Empower the people</p>
             </div>
         </div>
     </section>
