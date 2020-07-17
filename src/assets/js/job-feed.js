@@ -19,8 +19,14 @@ const renderJobPosting = (posting) => {
   const pDate = document.createElement('p');
   pDate.innerText = 'Posted: ' + new Date(pubDate).toLocaleDateString();
 
+  const innerDiv = document.createElement('div');
+  innerDiv.classList.add('job-post');
+  const imgDiv = document.createElement('div');
+  imgDiv.append(img);
+  innerDiv.append(imgDiv, div);
+
   div.append(a, pEmployer, pDate);
-  li.append(hr, img, div);
+  li.append(hr, innerDiv);
   ul.append(li);
 };
 

@@ -1,0 +1,41 @@
+{% extends 'base.njk' %}
+{% set titleWithPath = 'Home – ' %}
+{% set titleOfPage = 'Hackertunity' %}
+{% set backgroundImagePath = '/assets/img/yellow-laptop.jpg' %}
+
+{% block content %}
+
+    <style>
+        html {
+            background-image: url("{{backgroundImagePath}}");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .content {
+            display: flex;
+            justify-content: center;
+        }
+        .content img{
+            width: 250px;
+        }
+
+        .content p {
+            font-size: 1.6em;
+        }
+    </style>
+
+    <section class="page-container">
+        <div class="h2-container">
+            <h2><span id="titleOfPage">{{titleOfPage}}</span></h2>
+        </div>
+        <div class="content">
+            <img src="/assets/img/logo-clear.PNG" />
+            <div>
+                <p>End poverty.</p>
+                <p>Empower the people.</p>
+                <p>Enrich tech.</p>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
