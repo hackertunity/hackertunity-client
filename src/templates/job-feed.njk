@@ -1,0 +1,30 @@
+{% extends 'page.njk' %}
+{% set titleWithPath = 'Job Feed – ' %}
+{% set titleOfPage = 'Job Feed' %}
+{% set backgroundImagePath = '/assets/img/laptops.png' %}
+
+{% block pageContent %}
+    <div class="card">
+        <h3>About The Feed</h3>
+        <p>
+            <a href="https://weworkremotely.com/remote-job-rss-feed">We Work Remotely Public RSS Feed</a>
+        </p>
+        <p>
+            The below feed displays available job openings for remote work.
+            This feed uses We Work Remotely's Public RSS Feed. 
+            Their <a href="https://weworkremotely.com/#job-listings">website</a> also has a lot of useful resources on working remotely, 
+            and options to sort available jobs by desired area of expertise.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Remote Job Openings</h3>
+        <ul class="page-list" id="job-posting-list" role="list">
+        </ul>
+    </div>
+
+{% endblock %}
+
+{% block pageScript %}
+    <script src="{{'/assets/js/job-feed.js' | url}}"></script>
+{% endblock pageScript %}
