@@ -1,13 +1,13 @@
 {% extends 'page.njk' %}
 {% set titleWithPath = 'Team – ' %}
 {% set titleOfPage = 'The Team' %}
-{% set backgroundImagePath = '../assets/img/laptops.png' %}
+{% set backgroundImagePath = '/assets/img/laptops.png' %}
 
 {% macro renderBio(bio) -%}
     <li class="bio-item list-item">
         <div class="bio-item__img">
             {% if bio.imgFile %}
-                <img src="../assets/img/{{bio.imgFile}}" />
+                <img src="/assets/img/{{bio.imgFile}}" />
             {%else%}
                 <div class="{{bio.className}}" />
             {% endif %}
@@ -69,5 +69,5 @@
 {% endblock %}
 
 {% block pageScript %}
-    <script src="{{'../assets/js/team.js' | url}}"></script>
+    <script src="{{'/assets/js/team.js' | url}}"></script>
 {% endblock pageScript %}
