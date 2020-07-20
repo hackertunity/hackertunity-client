@@ -1,7 +1,7 @@
 {% extends 'page.njk' %}
 {% set titleWithPath = 'Job Feed – ' %}
 {% set titleOfPage = 'Job Feed' %}
-{% set backgroundImagePath = '/assets/img/laptops.png' %}
+{% set backgroundImagePath = '../assets/img/laptops.png' %}
 
 {% block pageContent %}
     <div class="card">
@@ -26,5 +26,5 @@
 {% endblock %}
 
 {% block pageScript %}
-    <script src="{{'/assets/js/job-feed.js' | url}}"></script>
+    <script src="{{'../assets/js/job-feed.js' | url}}"></script>
 {% endblock pageScript %}
