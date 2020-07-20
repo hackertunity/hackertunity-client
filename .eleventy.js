@@ -21,7 +21,7 @@ let markdownItConfig = markdownIt({
  */
 let Nunjucks = require("nunjucks");
 let nunjucksEnvironment = new Nunjucks.Environment(
-  new Nunjucks.FileSystemLoader("src/templates", { watch: true })
+  new Nunjucks.FileSystemLoader("src/templates")
 );
 
 const { ELEVENTY_ENV } = process.env;
